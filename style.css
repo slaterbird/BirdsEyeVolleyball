@@ -1,0 +1,182 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    padding-top: 80px; /* Prevents content from overlapping with the sticky header */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Sticky Header Styling */
+.sticky-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #007acc; /* Matches theme color */
+    color: white;
+    z-index: 1000;
+    padding: 10px 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sticky-header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.sticky-header nav {
+    display: flex;
+    gap: 15px;
+}
+
+.sticky-header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+.sticky-header nav a:hover {
+    background-color: #005f99;
+    border-radius: 5px;
+}
+
+/* Header Image Styling */
+.header-image {
+    width: 100%;
+    height: 300px; /* Keeps the image height consistent */
+    object-fit: cover; /* Ensures the image scales proportionally */
+    object-position: 50% 40%; /* Adjusts to crop further down */
+    display: block;
+    margin-bottom: 20px;
+}
+
+/* Navigation Styling (For Non-Sticky Section, Optional) */
+header h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin: 10px 0;
+}
+
+header nav {
+    text-align: center;
+    margin-top: 10px;
+}
+
+header nav a {
+    color: #007acc;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Landscape Image Below Header */
+.landscape-image {
+    position: relative;
+    width: 100%;
+    max-height: 400px; /* Reduced height of the image */
+    overflow: hidden; /* Ensures the image doesn’t extend beyond its container */
+}
+
+.landscape-image img {
+    width: 100%; /* Makes the image stretch across the full width */
+    height: auto; /* Maintains the image's aspect ratio */
+    display: block;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 50%; /* Center the text vertically */
+    left: 50%; /* Center the text horizontally */
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    color: white;
+    padding: 1em;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 1.2em;
+    width: 80%; /* Make the overlay slightly narrower than the image */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for emphasis */
+    font-weight: bold; /* Make the text stand out more */
+}
+
+/* Content Sections */
+.content-section {
+    padding: 2em 0;
+}
+
+h3 {
+    color: #007acc;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form select, form button {
+    margin: 0.5em 0;
+    padding: 0.5em;
+    font-size: 1em;
+}
+
+button {
+    background: #007acc;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 0.75em;
+}
+
+button:hover {
+    background: #005f99;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    body {
+        font-size: 90%;
+    }
+
+    header nav a {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .sticky-header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 10px;
+    }
+
+    .sticky-header nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
